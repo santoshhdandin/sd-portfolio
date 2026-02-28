@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "deploy": "gh-pages -d ."
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
@@ -41,5 +44,5 @@
   "bugs": {
     "url": "https://github.com/santoshhdandin/sd-portfolio/issues"
   },
-  "homepage": "https://github.com/santoshhdandin/sd-portfolio#readme"
+  "homepage": "https://santoshhdandin.github.io/sd-portfolio/"
 }
