@@ -147,41 +147,37 @@ function App() {
         <div className="flex gap-6 md:gap-10">
           <button
             onClick={() => setActiveSection('home')}
-            className={`text-sm md:text-base transition-all ${
-              activeSection === 'home'
+            className={`text-sm md:text-base transition-all ${activeSection === 'home'
                 ? 'text-cyan-400 font-semibold'
                 : 'text-gray-300 hover:text-cyan-400'
-            }`}
+              }`}
           >
             Home
           </button>
           <button
             onClick={() => setActiveSection('mindmap')}
-            className={`text-sm md:text-base transition-all ${
-              activeSection === 'mindmap'
+            className={`text-sm md:text-base transition-all ${activeSection === 'mindmap'
                 ? 'text-cyan-400 font-semibold'
                 : 'text-gray-300 hover:text-cyan-400'
-            }`}
+              }`}
           >
             Mind Map
           </button>
           <button
             onClick={() => setActiveSection('skills')}
-            className={`text-sm md:text-base transition-all ${
-              activeSection === 'skills'
+            className={`text-sm md:text-base transition-all ${activeSection === 'skills'
                 ? 'text-cyan-400 font-semibold'
                 : 'text-gray-300 hover:text-cyan-400'
-            }`}
+              }`}
           >
             Skills
           </button>
           <button
             onClick={() => setActiveSection('experience')}
-            className={`text-sm md:text-base transition-all ${
-              activeSection === 'experience'
+            className={`text-sm md:text-base transition-all ${activeSection === 'experience'
                 ? 'text-cyan-400 font-semibold'
                 : 'text-gray-300 hover:text-cyan-400'
-            }`}
+              }`}
           >
             Experience
           </button>
@@ -190,12 +186,10 @@ function App() {
 
       <main className="relative z-10">
         {activeSection === 'home' && (
-          <div className={`flex flex-col lg:flex-row items-center justify-center min-h-[85vh] max-w-7xl mx-auto px-6 md:px-12 gap-12 transition-all duration-1000 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            <div className={`lg:w-1/2 space-y-8 transition-all duration-700 delay-200 ${
-              isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+          <div className={`flex flex-col lg:flex-row items-center justify-center min-h-[85vh] max-w-7xl mx-auto px-6 md:px-12 gap-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
+            <div className={`lg:w-1/2 space-y-8 transition-all duration-700 delay-200 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+              }`}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm">
                 <Cpu className="w-4 h-4" />
                 Cloud Data Engineer
@@ -244,14 +238,13 @@ function App() {
               </div>
             </div>
 
-            <div className={`lg:w-1/2 flex items-center justify-center transition-all duration-700 delay-400 ${
-              isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-            }`}>
+            <div className={`lg:w-1/2 flex items-center justify-center transition-all duration-700 delay-400 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+              }`}>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
                 <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden border-4 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 transform hover:scale-105 transition-transform duration-500">
                   <img
-                    src="/Whisk_19db15c569added87cb471d65649c2a0dr.png"
+                    src={`${import.meta.env.BASE_URL}Whisk_19db15c569added87cb471d65649c2a0dr.png`}
                     alt="Santosh Dandin"
                     className="w-full h-full object-cover"
                   />
@@ -274,7 +267,7 @@ function App() {
 
             <div className="relative rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 bg-slate-900/50 backdrop-blur">
               <img
-                src="/Gemini_Generated_Image_6bnw9o6bnw9o6bnw.png"
+                src={`${import.meta.env.BASE_URL}Gemini_Generated_Image_6bnw9o6bnw9o6bnw.png`}
                 alt="Santosh Dandin Mind Map"
                 className="w-full h-auto"
               />
