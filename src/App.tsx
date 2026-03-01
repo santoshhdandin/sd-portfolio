@@ -13,6 +13,7 @@ interface CloudBubble {
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [clouds, setClouds] = useState<CloudBubble[]>([]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -104,7 +105,12 @@ function App() {
     {
       title: 'Domain Expertise',
       icon: <Users className="w-6 h-6" />,
-      skills: ['Healthcare - Horizon', 'Banking - BoA', 'Telecom - Ericsson']
+      skills: ['Healthcare - NovaOne, Horizon BCBSNJ', 'Banking - BoA', 'Telecom - Ericsson']
+    },
+    {
+      title: 'AI',
+      icon: <Cpu className="w-6 h-6" />,
+      skills: ['Automation (n8n, Make)', 'Agents (Lyzr, Retell)', 'LLMs (GPT, Gemini, Claude, Copilot)', 'MCP', 'RAG', 'Vibe Coding (Bolt, AntiGravity, Google AI Studio)', 'Agentic AI', 'Gen AI', 'Voice Agents', 'Chatbots']
     }
   ];
 
@@ -148,26 +154,26 @@ function App() {
           <button
             onClick={() => setActiveSection('home')}
             className={`text-sm md:text-base transition-all ${activeSection === 'home'
-                ? 'text-cyan-400 font-semibold'
-                : 'text-gray-300 hover:text-cyan-400'
+              ? 'text-cyan-400 font-semibold'
+              : 'text-gray-300 hover:text-cyan-400'
               }`}
           >
             Home
           </button>
           <button
-            onClick={() => setActiveSection('mindmap')}
-            className={`text-sm md:text-base transition-all ${activeSection === 'mindmap'
-                ? 'text-cyan-400 font-semibold'
-                : 'text-gray-300 hover:text-cyan-400'
+            onClick={() => setActiveSection('myworld')}
+            className={`text-sm md:text-base transition-all ${activeSection === 'myworld'
+              ? 'text-cyan-400 font-semibold'
+              : 'text-gray-300 hover:text-cyan-400'
               }`}
           >
-            Mind Map
+            MyWorld
           </button>
           <button
             onClick={() => setActiveSection('skills')}
             className={`text-sm md:text-base transition-all ${activeSection === 'skills'
-                ? 'text-cyan-400 font-semibold'
-                : 'text-gray-300 hover:text-cyan-400'
+              ? 'text-cyan-400 font-semibold'
+              : 'text-gray-300 hover:text-cyan-400'
               }`}
           >
             Skills
@@ -175,8 +181,8 @@ function App() {
           <button
             onClick={() => setActiveSection('experience')}
             className={`text-sm md:text-base transition-all ${activeSection === 'experience'
-                ? 'text-cyan-400 font-semibold'
-                : 'text-gray-300 hover:text-cyan-400'
+              ? 'text-cyan-400 font-semibold'
+              : 'text-gray-300 hover:text-cyan-400'
               }`}
           >
             Experience
@@ -192,7 +198,7 @@ function App() {
               }`}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm">
                 <Cpu className="w-4 h-4" />
-                Cloud Data Engineer
+                AI Powered Cloud & Big Data Engineer
               </div>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
@@ -204,7 +210,7 @@ function App() {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                Transforming data into cloud-native solutions. Specializing in <span className="text-cyan-400 font-semibold">AWS</span>, <span className="text-cyan-400 font-semibold">Big Data</span>, and <span className="text-cyan-400 font-semibold">DevOps</span> with expertise across Healthcare, Banking, and Telecom domains.
+                Transforming data into cloud-native solutions. Specializing in <span className="text-cyan-400 font-semibold">Data Platforms</span>, <span className="text-cyan-400 font-semibold">AWS Cloud Serverless</span>, <span className="text-cyan-400 font-semibold">Big Data</span>, <span className="text-cyan-400 font-semibold">Spark</span>, <span className="text-cyan-400 font-semibold">Hadoop</span> and <span className="text-cyan-400 font-semibold">DevOps</span> with expertise across Healthcare, Banking, and Telecom domains.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -215,7 +221,8 @@ function App() {
                   View Projects
                 </a>
                 <a
-                  href="#"
+                  href={`${import.meta.env.BASE_URL}Santosh_Cloud_Data_Engineer_Resume.docx`}
+                  download
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur border border-cyan-500/30 rounded-lg font-semibold hover:bg-slate-800 transition-all"
                 >
                   Download Resume
@@ -256,7 +263,7 @@ function App() {
           </div>
         )}
 
-        {activeSection === 'mindmap' && (
+        {activeSection === 'myworld' && (
           <div className="py-12 md:py-20 max-w-7xl mx-auto px-6 md:px-12 animate-fadeIn">
             <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               My Technical Universe
@@ -268,7 +275,7 @@ function App() {
             <div className="relative rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 bg-slate-900/50 backdrop-blur">
               <img
                 src={`${import.meta.env.BASE_URL}mindmap.png`}
-                alt="Santosh Dandin Mind Map"
+                alt="Santosh Dandin MyWorld"
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
@@ -351,7 +358,7 @@ function App() {
                 <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/50 group-hover:scale-125 transition-transform"></div>
                 <div className="text-sm text-cyan-400 mb-2 font-semibold">Current Role</div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">Cloud Data Engineer</h3>
-                <p className="text-gray-400 mb-6">Architecting cloud-native data solutions at scale</p>
+                <p className="text-gray-400 mb-6">Architecting cloud serverless data solutions at scale</p>
                 <div className="space-y-3 text-gray-300">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2"></div>
@@ -401,15 +408,15 @@ function App() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
                   <div className="p-4 rounded-lg bg-slate-800/50 border border-cyan-500/20">
                     <h4 className="font-semibold text-cyan-400 mb-2">Healthcare</h4>
-                    <p className="text-sm text-gray-400">Horizon Health - Data pipeline optimization</p>
+                    <p className="text-sm text-gray-400">NovaOne, Horizon BCBSNJ - Architecting cloud serverless data solutions at scale</p>
                   </div>
                   <div className="p-4 rounded-lg bg-slate-800/50 border border-cyan-500/20">
                     <h4 className="font-semibold text-cyan-400 mb-2">Banking</h4>
-                    <p className="text-sm text-gray-400">Bank of America - Financial data processing</p>
+                    <p className="text-sm text-gray-400">Bank of America - Building distributed data processing platform</p>
                   </div>
                   <div className="p-4 rounded-lg bg-slate-800/50 border border-cyan-500/20">
                     <h4 className="font-semibold text-cyan-400 mb-2">Telecom</h4>
-                    <p className="text-sm text-gray-400">Ericsson - Network data analytics</p>
+                    <p className="text-sm text-gray-400">Ericsson - Network testing</p>
                   </div>
                 </div>
               </div>
