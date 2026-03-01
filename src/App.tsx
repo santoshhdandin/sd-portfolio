@@ -244,7 +244,7 @@ function App() {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
                 <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden border-4 border-cyan-500/30 shadow-2xl shadow-cyan-500/20 transform hover:scale-105 transition-transform duration-500">
                   <img
-                    src={`${import.meta.env.BASE_URL}Whisk_19db15c569added87cb471d65649c2a0dr.png`}
+                    src={`${import.meta.env.BASE_URL}profile.png`}
                     alt="Santosh Dandin"
                     className="w-full h-full object-cover"
                   />
@@ -267,7 +267,7 @@ function App() {
 
             <div className="relative rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 bg-slate-900/50 backdrop-blur">
               <img
-                src={`${import.meta.env.BASE_URL}Gemini_Generated_Image_6bnw9o6bnw9o6bnw.png`}
+                src={`${import.meta.env.BASE_URL}mindmap.png`}
                 alt="Santosh Dandin Mind Map"
                 className="w-full h-auto"
               />
