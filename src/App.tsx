@@ -108,9 +108,9 @@ function App() {
       skills: ['Healthcare - NovaOne, Horizon BCBSNJ', 'Banking - BoA', 'Telecom - Ericsson']
     },
     {
-      title: 'AI',
+      title: 'AI & Automation',
       icon: <Cpu className="w-6 h-6" />,
-      skills: ['Automation (n8n, Make)', 'Agents (Lyzr, Retell)', 'LLMs (GPT, Gemini, Claude, Copilot)', 'MCP', 'RAG', 'Vibe Coding (Bolt, AntiGravity, Google AI Studio)', 'Agentic AI', 'Gen AI', 'Voice Agents', 'Chatbots']
+      skills: ['GenAI' , 'LLMs' , 'Agentic AI workflows','Voice Agents' ,'Chatbots', 'RAG', 'MCP', 'AI Automation (n8n, Make)', 'AI Coding Assistants']
     }
   ];
 
@@ -209,10 +209,10 @@ function App() {
                 <span className="text-gray-300">Dandin</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                Transforming data into cloud-native solutions. Specializing in <span className="text-cyan-400 font-semibold">Data Platforms</span>, <span className="text-cyan-400 font-semibold">AWS Cloud Serverless</span>, <span className="text-cyan-400 font-semibold">Big Data</span>, <span className="text-cyan-400 font-semibold">Spark</span>, <span className="text-cyan-400 font-semibold">Hadoop</span> and <span className="text-cyan-400 font-semibold">DevOps</span> with expertise across Healthcare, Banking, and Telecom domains.
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">			  
+			  Architecting scalable data platforms using <span className="text-cyan-400 font-semibold"> AWS Cloud Serverless </span>, <span className="text-cyan-400 font-semibold"> Big Data </span> (Spark/Hadoop), and <span className="text-cyan-400 font-semibold"> DevOps </span> to build enterprise solutions for Healthcare, Banking, and Telecom.
               </p>
-
+			  
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#"
