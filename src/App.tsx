@@ -77,20 +77,26 @@ function App() {
   }, [clouds]);
 
   const skillCategories = [
-    {
-      title: 'Big Data',
-      icon: <Database className="w-6 h-6" />,
-      skills: ['Spark', 'Hive', 'HDFS', 'Kafka', 'HBase', 'Sqoop', 'Impala']
-    },
+
     {
       title: 'AWS & DevOps',
       icon: <Cloud className="w-6 h-6" />,
-      skills: ['Lambda', 'Glue', 'Athena', 'S3', 'Redshift', 'Lake Formation', 'CloudWatch', 'IAM', 'AppFlow', 'Airflow', 'API Gateway', 'EventBridge', 'Jenkins', 'CI/CD', 'Git', 'Bitbucket']
+      skills: ['Lambda', 'Glue', 'Athena', 'S3', 'Redshift', 'DBT', 'Lake Formation', 'CloudWatch', 'IAM', 'AppFlow', 'Airflow', 'API Gateway', 'EventBridge', 'CI/CD', 'MWAA']
+    },
+    {
+      title: 'Big Data',
+      icon: <Database className="w-6 h-6" />,
+      skills: ['Spark', 'Hive', 'HDFS', 'Kafka', 'HBase', 'Sqoop', 'Impala', 'Jenkins', 'Git', 'MySQL', 'DynamoDB' , 'Splunk', 'Cloudera', 'Atlas'  ]
+    },
+    {
+      title: 'AI & Automation',
+      icon: <Cpu className="w-6 h-6" />,
+      skills: ['GenAI' , 'LLMs' , 'Agentic AI workflows','Voice Agents' ,'Chatbots', 'RAG', 'MCP', 'AI Automation (n8n, Make)', 'AI Coding Assistants']
     },
     {
       title: 'Languages',
       icon: <Code className="w-6 h-6" />,
-      skills: ['Python', 'Java', 'Groovy', 'SQL', 'Shell Script']
+      skills: ['Python', 'Java', 'Groovy', 'SQL', 'Shell Script', 'PySpark']
     },
     {
       title: 'Testing & QA',
@@ -106,11 +112,6 @@ function App() {
       title: 'Domain Expertise',
       icon: <Users className="w-6 h-6" />,
       skills: ['Healthcare - NovaOne, Horizon BCBSNJ', 'Banking - BoA', 'Telecom - Ericsson']
-    },
-    {
-      title: 'AI & Automation',
-      icon: <Cpu className="w-6 h-6" />,
-      skills: ['GenAI' , 'LLMs' , 'Agentic AI workflows','Voice Agents' ,'Chatbots', 'RAG', 'MCP', 'AI Automation (n8n, Make)', 'AI Coding Assistants']
     }
   ];
 
